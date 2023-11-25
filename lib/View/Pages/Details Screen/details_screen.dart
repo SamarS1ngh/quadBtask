@@ -3,6 +3,7 @@ import 'package:fluttemp/Utils/colors.dart';
 import 'package:fluttemp/Utils/texts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class DetailScreen extends StatelessWidget {
@@ -23,6 +24,39 @@ class DetailScreen extends StatelessWidget {
           padding: EdgeInsets.fromLTRB(.06.sw, 25, .06.sw, 50),
           child: Column(
             children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 10.0, bottom: 20),
+                child: GestureDetector(
+                  onTap: () {
+                    context.push("/search");
+                  },
+                  child: Container(
+                    height: 0.047.sh,
+                    width: 0.85.sw,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        color: AppColors.accentColor),
+                    child: const Row(
+                      children: [
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Icon(
+                          Icons.search,
+                          color: AppColors.textSecondary,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          'Search books...',
+                          style: TextStyle(color: Colors.grey),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

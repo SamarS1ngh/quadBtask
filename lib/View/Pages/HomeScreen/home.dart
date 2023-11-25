@@ -36,38 +36,8 @@ class _HomeState extends State<Home> {
       ]))),
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 10.0, bottom: 20),
-            child: GestureDetector(
-              onTap: () {
-                context.push("/search");
-              },
-              child: Container(
-                height: 0.047.sh,
-                width: 0.85.sw,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: AppColors.accentColor),
-                child: const Row(
-                  children: [
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Icon(
-                      Icons.search,
-                      color: AppColors.textSecondary,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      'Search books...',
-                      style: TextStyle(color: Colors.grey),
-                    )
-                  ],
-                ),
-              ),
-            ),
+          SizedBox(
+            height: 20,
           ),
           Expanded(
             child: Consumer<ShowsViewModel>(
