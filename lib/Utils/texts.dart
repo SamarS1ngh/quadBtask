@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class AppFonts {
   static TextStyle titleText = GoogleFonts.kanit(
-      fontWeight: FontWeight.w600, color: Colors.white, fontSize: 40);
+      fontWeight: FontWeight.w500, color: Colors.white, fontSize: 35);
 
   static TextStyle bodyText = GoogleFonts.poppins(
       fontWeight: FontWeight.w500, color: AppColors.textPrimary, fontSize: 30);

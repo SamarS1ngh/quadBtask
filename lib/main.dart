@@ -1,20 +1,20 @@
 import 'package:fluttemp/Utils/Routes/app_router_config.dart';
+import 'package:fluttemp/Utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'ViewModel/Provider/someclass.dart';
+import 'ViewModel/Provider/showsVM.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
   runApp(MultiProvider(
-    providers: [
-      ChangeNotifierProvider(create: (context) => SomeChangenotifierClass())
-    ],
+    providers: [ChangeNotifierProvider(create: (context) => ShowsViewModel())],
     child: const MyApp(),
   ));
 }
@@ -34,7 +34,10 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             routerConfig: AppRouter.router,
             theme: ThemeData(
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+              colorScheme: const ColorScheme.dark(
+                  background: AppColors.backgroundColor,
+                  error: AppColors.errorColor,
+                  primary: AppColors.primaryColor),
               useMaterial3: true,
             ),
           );

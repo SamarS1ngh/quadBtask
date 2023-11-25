@@ -2,7 +2,7 @@
     <application
         android:label="fluttemp"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/filmcube">
         <activity
             android:name=".MainActivity"
             android:exported="true"
